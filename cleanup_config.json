@@ -1,0 +1,12 @@
+{
+  "paths": [
+    {
+      "path": "/var/log/apache2/",
+      "retention_days": 7
+    },
+    {
+      "path": "/var/log/mysql/",
+      "retention_days": 30
+    }
+  ]
+}
