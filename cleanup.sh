@@ -41,7 +41,7 @@ echo "processing directory: $DIR (retention: $RET_DAYS days)"
 
 if [ -d "$DIR" ]
 then
-	find "$DIR" -type f -mtime +$RET_DAYS -exec rm -f {} \;
+	find "$DIR" -type f -name "*.gz"  -mtime +$RET_DAYS -exec rm -f {} \;
 	echo "cleaned files older than $RET_DAYS days in $DIR"
 else
 	echo "ERROR: Directory $DIR does not exist"
